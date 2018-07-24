@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>KTÜ CENG</title>
+ <style type="text/css">
+  body {  margin:0px; padding:0px; }
+  #menum ul {
+     top:3%; left:9%; position:absolute;
+    list-style:none;
+	margin:0px; padding:3px; }
+  #menum li {
+     
+    float:left; position:relative; width:205px; }
+  #menum li ul {
+    display:none; left:0; position:absolute; top:45px;}
+  #menum ul li a{
+
+    background:#0e9ae0;
+    border-color:#2f80b2;
+    border-style:outset;
+    border-radius:23px;
+    color:#ffffff;
+    display:block;
+    font: 20px Segoe Script, Helvetica, Sans-seri;
+    margin:0%;
+    padding:2px 20px;
+   text-decoration:none;
+    line-height:40px;
+   text-align: center;
+  
+  }
+  #menum ul li a:hover {
+
+     
+    background-color:#ff6a00; color:#ffffff; }
+  #menum li:hover ul { display:block;  text-align: center;}
+  .icon{  top:3%; left:10%; position:absolute;}
+ </style>       
+    <asp:ContentPlaceHolder id="head" runat="server">
+  
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+  
+    
+       <div id="menum">
+
+            
+<ul>
+          
+<li> <a href="master.aspx">  <asp:Image ID="Image2" runat="server" ImageUrl="~/image/unnamed.png"/>   ANA SAYFA</a></li>
+<li><a href="hakkımızda.aspx">HAKKIMIZDA</a></li>
+<li><a href="#">SOSYAL</a>
+  <ul>
+    <li><a href="gezgor.aspx">GEZ-GÖR</a></li>
+	<li><a href="yemeicme.aspx">YEME-İÇME</a></li>
+	<li><a href="konaklama.aspx">KONAKLAMA</a></li>
+	<li><a href="ulasım.aspx"> ULAŞIM</a></li>
+    <li><a href="aktivite.aspx">AKTİVİTE</a></li>
+    
+  </ul> 
+    </li> 
+<li><a href="#">OKUL</a>
+    <ul>
+        <li><a href="dersler.aspx">DERSLER</a></li>
+        <li><a href="kulüpler.aspx"> KULÜPLER</a></li>
+        <li><a href="dersnotu.aspx"> DERS NOTU </a></li>
+    </ul>
+    </li>
+  
+
+<li><a href="iletisim.aspx">İLETİŞİM</a></li>
+</ul>
+</div>
+    <form id="form1" runat="server">
+    <div>
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+    
+    <%--<script src="Js/jquery-1.11.3.min.js"></script>
+        <script src="Js/bootstrap.js"></script>--%>
+</body>
+
+    
+</html>
